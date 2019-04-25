@@ -26,7 +26,6 @@ class BookRequest extends FormRequest
         return [
             'name' => 'required|max:255|min:5',
             'author' => 'required|max:255|min:3',
-            'tags' => 'max:255|min:3',
         ];
     }
 }
