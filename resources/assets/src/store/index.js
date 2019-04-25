@@ -139,6 +139,7 @@ export default new Vuex.Store({
                         let idx = context.state.books.findIndex(b => b.id == payload.id);
                         context.state.books.splice(idx, 1, payload);
                     } else {
+                        payload.id = resp.id;
                         context.state.books.splice(context.state.books.length, 0, payload);
                         context.dispatch('showList');
                     }
